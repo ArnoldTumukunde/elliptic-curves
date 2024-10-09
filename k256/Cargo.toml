@@ -20,7 +20,7 @@ rust-version = "1.73"
 
 [dependencies]
 cfg-if = "1.0"
-elliptic-curve = { version = "0.14.0-rc.0", default-features = false, features = ["sec1"] }
+elliptic-curve = { branch = "master", default-features = false, features = ["sec1"], git = "https://github.com/ArnoldTumukunde/traits.git" }
 
 # optional dependencies
 once_cell = { version = "1.20", optional = true, default-features = false }
