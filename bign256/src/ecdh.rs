@@ -36,8 +36,9 @@
 use crate::{AffinePoint, FieldBytes, NonZeroScalar, ProjectivePoint, PublicKey};
 use belt_hash::BeltHash;
 use core::borrow::Borrow;
-use elliptic_curve::point::AffineCoordinates;
+use primeorder::elliptic_curve::point::AffineCoordinates;
 use elliptic_curve::zeroize::{Zeroize, ZeroizeOnDrop};
+use elliptic_curve::ops::Reduce;
 use hkdf::Hkdf;
 use hmac::SimpleHmac;
 use rand_core::CryptoRngCore;

@@ -20,11 +20,12 @@ rust-version = "1.73"
 
 [dependencies]
 cfg-if = "1.0"
-elliptic-curve = { branch = "master", default-features = false, features = ["sec1"], git = "https://github.com/ArnoldTumukunde/traits.git" }
+elliptic-curve = { branch = "master", features = ["sec1"], git = "https://github.com/ArnoldTumukunde/traits.git" }
 
 # optional dependencies
 once_cell = { version = "1.20", optional = true, default-features = false }
-ecdsa-core = { version = "=0.17.0-pre.9", package = "ecdsa", optional = true, default-features = false, features = ["der"] }
+ecdsa-core = { branch = "master", package = "ecdsa", optional = true, default-features = false, features = ["der"], git = "https://github.com/ArnoldTumukunde/signatures.git" }
+
 hex-literal = { version = "0.4", optional = true }
 serdect = { version = "0.3.0-rc.0", optional = true, default-features = false }
 sha2 = { version = "=0.11.0-pre.4", optional = true, default-features = false }
@@ -33,7 +34,7 @@ signature = { version = "=2.3.0-pre.4", optional = true }
 [dev-dependencies]
 blobby = "0.3"
 criterion = "0.5"
-ecdsa-core = { version = "=0.17.0-pre.9", package = "ecdsa", default-features = false, features = ["dev"] }
+ecdsa-core = { branch = "master", package = "ecdsa", default-features = false, features = ["dev"], git = "https://github.com/ArnoldTumukunde/signatures.git" }
 hex = "0.4.3"
 hex-literal = "0.4"
 num-bigint = "0.4"

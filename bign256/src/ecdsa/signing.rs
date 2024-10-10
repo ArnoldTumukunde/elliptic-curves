@@ -20,12 +20,13 @@ use belt_hash::{BeltHash, Digest};
 use core::fmt::{self, Debug};
 use elliptic_curve::{
     array::{sizes::U32, typenum::Unsigned, Array},
-    ops::{MulByGenerator, Reduce},
-    point::AffineCoordinates,
+    ops::Reduce,
     subtle::{Choice, ConstantTimeEq},
     Curve, Field, FieldBytesEncoding, PrimeField,
 };
 use signature::{hazmat::PrehashSigner, Error, KeypairRef, Result, Signer};
+use primeorder::elliptic_curve::{ops::MulByGenerator, point::AffineCoordinates};
+
 
 /// BignP256 secret key used for signing messages and producing signatures.
 ///

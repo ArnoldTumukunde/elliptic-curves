@@ -18,7 +18,7 @@ edition = "2021"
 rust-version = "1.73"
 
 [dependencies]
-elliptic-curve = { version = "0.14.0-rc.0", default-features = false, features = ["sec1"] }
+elliptic-curve = { branch = "master", default-features = false, features = ["sec1"], git = "https://github.com/ArnoldTumukunde/traits.git"  }
 
 # optional dependencies
 primeorder = { version = "=0.14.0-pre.2", optional = true, path = "../primeorder" }

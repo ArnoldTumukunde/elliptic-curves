@@ -58,6 +58,7 @@ impl elliptic_curve::Curve for NistP192 {
 
 impl elliptic_curve::PrimeCurve for NistP192 {}
 
+
 impl elliptic_curve::point::PointCompression for NistP192 {
     /// NIST P-192 points are typically uncompressed.
     const COMPRESS_POINTS: bool = false;
